@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.wideverse.headlesswifimanager
+com.wideverse.headlesswifimanager.data
+com.wideverse.headlesswifimanager.helper
+com.wideverse.headlesswifimanager.interfaces

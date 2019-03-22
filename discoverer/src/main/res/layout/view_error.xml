@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Wideverse
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:text="Uh Oh!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/welcomeTitle" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+    />
+    <TextView
+            android:text="An unexpected error has occurred. Please try again later."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcomeSubtitle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+    />
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETRY"
+            app:backgroundTint="@android:color/holo_red_light"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            style="@style/Widget.MaterialComponents.Button"
+    />
+    <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp" app:srcCompat="@drawable/cancel"
+            android:id="@+id/imageView2" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeSubtitle" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

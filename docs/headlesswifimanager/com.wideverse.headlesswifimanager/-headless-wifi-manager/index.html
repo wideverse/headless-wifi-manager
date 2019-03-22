@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HeadlessWifiManager - headlesswifimanager</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">headlesswifimanager</a>&nbsp;/&nbsp;<a href="../index.html">com.wideverse.headlesswifimanager</a>&nbsp;/&nbsp;<a href="./index.html">HeadlessWifiManager</a><br/>
+<br/>
+<h1>HeadlessWifiManager</h1>
+<code><span class="keyword">class </span><span class="identifier">HeadlessWifiManager</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-scan-result-listener/index.html">ScanResultListener</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ScanResultListener</span></code>
+<p>Populates a list of WiFi ScanResults trough system's WifiManager</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">HeadlessWifiManager</span><span class="symbol">(</span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$<init>(android.content.Context, kotlin.String)/applicationContext">applicationContext</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$<init>(android.content.Context, kotlin.String)/appID">appID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>Main constructor for HeadlessWifiManager.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="advertising-callback.html">advertisingCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">advertisingCallback</span><span class="symbol">: </span><a href="../../com.wideverse.headlesswifimanager.interfaces/-advertising-callback/index.html"><span class="identifier">AdvertisingCallback</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="app-i-d.html">appID</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">appID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="current-connected-endpoint-id.html">currentConnectedEndpointId</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currentConnectedEndpointId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="discovery-callback.html">discoveryCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">discoveryCallback</span><span class="symbol">: </span><a href="../../com.wideverse.headlesswifimanager.interfaces/-discovery-callback/index.html"><span class="identifier">DiscoveryCallback</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="network-callback.html">networkCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">networkCallback</span><span class="symbol">: </span><a href="../../com.wideverse.headlesswifimanager.interfaces/-network-callback/index.html"><span class="identifier">NetworkCallback</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="abort-procedure.html">abortProcedure</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">abortProcedure</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Closes the current connection and stops discovery</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="connect-to-endpoint.html">connectToEndpoint</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">connectToEndpoint</span><span class="symbol">(</span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$connectToEndpoint(kotlin.String)/endpointId">endpointId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Connects the discoverer to a specific advertiser.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send-wifi-credentials.html">sendWifiCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendWifiCredentials</span><span class="symbol">(</span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$sendWifiCredentials(com.wideverse.headlesswifimanager.data.WifiScanResult, com.wideverse.headlesswifimanager.interfaces.NetworkCallback)/chosenOne">chosenOne</span><span class="symbol">:</span>&nbsp;<a href="../../com.wideverse.headlesswifimanager.data/-wifi-scan-result/index.html"><span class="identifier">WifiScanResult</span></a><span class="symbol">, </span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$sendWifiCredentials(com.wideverse.headlesswifimanager.data.WifiScanResult, com.wideverse.headlesswifimanager.interfaces.NetworkCallback)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../../com.wideverse.headlesswifimanager.interfaces/-network-callback/index.html"><span class="identifier">NetworkCallback</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sends WiFi credentials from Advertiser to Discoverer</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="start-advertising.html">startAdvertising</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startAdvertising</span><span class="symbol">(</span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$startAdvertising(com.wideverse.headlesswifimanager.interfaces.AdvertisingCallback)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../../com.wideverse.headlesswifimanager.interfaces/-advertising-callback/index.html"><span class="identifier">AdvertisingCallback</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts advertising
+Called on the advertiser that awaits configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="start-discovery.html">startDiscovery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startDiscovery</span><span class="symbol">(</span><span class="identifier" id="com.wideverse.headlesswifimanager.HeadlessWifiManager$startDiscovery(com.wideverse.headlesswifimanager.interfaces.DiscoveryCallback)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../../com.wideverse.headlesswifimanager.interfaces/-discovery-callback/index.html"><span class="identifier">DiscoveryCallback</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts searching for advertisers
+Called on the phone to configure the advertiser</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

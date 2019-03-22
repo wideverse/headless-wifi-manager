@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2019 Wideverse
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:text="Scanning for devices..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:id="@+id/welcomeTitle" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="Your phone is currently scanning for headless devices to configure."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcomeSubtitle"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+    />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Wave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/iconsColor" android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeSubtitle"
+            app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+    />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
