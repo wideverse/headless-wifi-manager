@@ -12,12 +12,12 @@ Using your phone, you can configure your Google Home to connect to a specific ne
 ## What this library do
 This library assumes you have 2 devices.
  * An **advertiser**, your headless device that is totally disconnected to WiFi and any other network. 
- * A **discoverer**, your phone that has a screen indeed (\o/) and can scan for nearby WiFi access points.
+ * A **discoverer**, your phone that has a screen indeed (\o/) and can pick a WiFi access point for the advertiser to connect on.
  
 Using Android **Nearby API**, the **discoverer** and the **advertiser** communicate without the need to be on the same network using a combination of Wifi hotspots and Bluetooth.
 
 The whole process can be summarized as follows:
- 1. The **advertiser** starts advertising it's presence to nearby devices;
+ 1. The **advertiser** starts advertising its presence to nearby devices;
  2. The **discover** connects to an available advertiser and **receives a list of Wifi Networks from it**;
  3. The **discover** selects a network and sends it's credentials back to the **advertiser**;
  4. The **advertiser** connects to the network with the given credentials;
@@ -106,11 +106,12 @@ headlessWifiManager.startDiscovery(object: DiscoveryCallback {
                     // that are stored in results
                     
                     // Let's take the first discovered network for semplicity
-                    results[0].password = "sherLocked"
+		    val chosenAccessPoint = results[0]
+                    chosenAccessPoint.password = "sherLocked"
                     // If the network doesn't have a protection, leave the password filed empty
                     
                     // Then call sendWifiCredentials to send data back to the advertiser
-                    headlessWifiManager.sendWifiCredentials(result,
+                    headlessWifiManager.sendWifiCredentials(chosenAccessPoint,
                     object : NetworkCallback {
                         override fun onError(e: Exception) {
                              Log.e(TAG, "An error has occurred")
