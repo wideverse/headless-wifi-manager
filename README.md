@@ -9,7 +9,7 @@ Imagine the classic "Google Home" situation.
 You have an Headless device (your Google Home) that isn't connected to WiFi.
 Using your phone, you can configure your Google Home to connect to a specific network and then communicate with it more easily.
 
-## What this library do
+## What this library does
 This library assumes you have 2 devices.
  * An **advertiser**, your headless device that is totally disconnected to WiFi and any other network. 
  * A **discoverer**, your phone that has a screen indeed (\o/) and can pick a WiFi access point for the advertiser to connect on.
@@ -18,8 +18,8 @@ Using Android **Nearby API**, the **discoverer** and the **advertiser** communic
 
 The whole process can be summarized as follows:
  1. The **advertiser** starts advertising its presence to nearby devices;
- 2. The **discover** connects to an available advertiser and **receives a list of Wifi Networks from it**;
- 3. The **discover** selects a network and sends it's credentials back to the **advertiser**;
+ 2. The **discoverer** connects to an available advertiser and **receives a list of Wifi Networks from it**;
+ 3. The **discoverer** selects a network and sends its credentials back to the **advertiser**;
  4. The **advertiser** connects to the network with the given credentials;
  5. The **advertiser** sends an acknowledgment with a positive or negative result to the **discoverer**;
 
